@@ -1,0 +1,101 @@
+body {
+  background: #dcbb9a;
+  margin: 0;
+  padding: 0; }
+
+#content {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 13px;
+  margin: 5px 170px 5px 170px; }
+
+h1 {
+  color: #893c00;
+  text-align: center;
+  margin-top: 13px;
+  margin-bottom: 0; }
+
+h2 {
+  color: #893c00; }
+
+img {
+  border: 2px solid #893c00;
+  padding: 2px;
+  float: left;
+  margin: 0px 15px 10px 0px; }
+
+.brief + img {
+  float: right;
+  margin: 0px 0px 10px 15px; }
+
+.brief {
+  float: left;
+  width: 350px;
+  padding: 15px;
+  background: #fadcba;
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 8px; }
+
+a {
+  color: #3d70a1; }
+
+table {
+  text-align: left;
+  border-spacing: 0;
+  width: 100%; }
+
+caption {
+  text-align: right; }
+
+table,
+caption {
+  padding-right: 50px; }
+
+th {
+  text-transform: uppercase;
+  background: #e0e0e0;
+  padding: 10px 15px 10px 15px;
+  font-weight: normal; }
+  th:not(:first-child) {
+    border-left: 1px solid white; }
+
+td {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 5px 15px 5px 15px; }
+
+.response {
+  padding-right: 6px; }
+
+form {
+  width: 100%; }
+
+input,
+textarea,
+button {
+  margin: 5px 5px 10px 0px; }
+
+div input,
+div textarea {
+  width: 100%; }
+
+textarea {
+  overflow: hidden; }
+
+.name {
+  width: 49%; }
+  .name:first-child {
+    float: left; }
+  .name:nth-child(2) {
+    float: right; }
+
+span {
+  color: #808080; }
+
+button.button {
+  color: #3d70a1;
+  border: 1px solid #3d70a1;
+  background: #ffffff;
+  width: 180px;
+  height: 35px;
+  font-size: 1.1em; }

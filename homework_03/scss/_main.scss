@@ -1,0 +1,157 @@
+// css style flag  'first' 'second'
+$style: null !default;
+
+$bodyBgcolor: null !default;
+body {
+	background: $bodyBgcolor;
+	margin: 0;
+	padding: 0;
+}
+//only for content and button bg
+$backgroundColor: null !default;
+$textColor: null !default;
+#content {
+	background-color: $backgroundColor;
+	color: $textColor;
+	padding: 13px;
+	margin: 5px 170px 5px 170px;
+}
+//color of heading text and img border
+$headingColor: null !default;
+h1 {
+	color: $headingColor;
+	text-align: center;
+	margin-top: 13px;
+	margin-bottom: 0;
+	@if $style == "second" {
+		text-transform: uppercase;
+	}
+}
+h2 {
+	color: $headingColor;
+}
+
+img {
+	border: 2px solid $headingColor;
+	padding: 2px;
+	float: left;
+	margin: 0px 15px 10px 0px;
+}
+
+.brief + img {
+	float: right;
+	margin: 0px 0px 10px 15px;
+}
+
+@mixin colorBlack($style) {
+	@if $style == "second" {
+		color: #000000;
+	}
+}
+//just for brief note
+$briefBgColor: null !default;
+
+.brief {
+	@if $style == "first" {
+		float: left;
+		width: 350px;
+	}
+	padding: 15px;
+	background: $briefBgColor;
+	position: relative;
+	margin-bottom: 20px;
+	margin-right: 8px;
+	@include colorBlack($style);
+}
+//color for hyperlink
+$aColor: null !default;
+a {
+	color: $aColor;
+}
+//table styles
+@mixin table($styleParameter //style value: first or second
+	, $thBgColorParameter //for table header bg-color 
+	, $tdBgColor:#677d01 //for table cell bg-color, only for second style
+	) {
+	table {
+		text-align: left;
+		border-spacing: 0;
+		width: 100%;
+	}
+	caption {
+		@include colorBlack($styleParameter);
+		text-align: right;
+	}
+	table,
+	caption {
+		padding-right: 50px;
+	}
+
+	th {
+		@include colorBlack($styleParameter);
+		text-transform: uppercase;
+		background: $thBgColorParameter;
+		padding: 10px 15px 10px 15px;
+		font-weight: normal;
+		&:not(:first-child) {
+			border-left: 1px solid white;
+		}
+	}
+
+	td {
+		border-bottom: 1px solid $thBgColorParameter;
+		padding: 5px 15px 5px 15px;
+		@if $styleParameter == "second" {
+			background: $tdBgColor;
+		}
+	}
+}
+// table header bg-color
+$thBgColor: null !default;
+
+@include table($styleParameter:$style, $thBgColorParameter:$thBgColor);
+
+//form styles
+.response {
+	padding-right: 6px;
+}
+
+form {
+	width: 100%;
+}
+input,
+textarea,
+button {
+	margin: 5px 5px 10px 0px;
+}
+div input,
+div textarea {
+	width: 100%;
+}
+textarea {
+	overflow: hidden;
+}
+
+.name {
+	width: 49%;
+	&:first-child {
+		float: left;
+	}
+	&:nth-child(2) {
+		float: right;
+	}
+}
+//for text span color
+$spanColor: null !default;
+span {
+	color: $spanColor;
+}
+// button style
+button.button {
+	color: $aColor;
+	border: 1px solid $aColor;
+	background: $backgroundColor;
+	width: 180px;
+	height: 35px;
+	font-size: 1.1em;
+}
