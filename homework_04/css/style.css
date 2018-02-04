@@ -1,0 +1,460 @@
+body {
+	margin: 0px;
+}
+
+#container {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans";
+}
+
+header {
+	background-image: url(../img/apples.jpg);
+	height: 46.3vw;
+	max-width: 100vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.logo {
+	width: 50vw;
+	float: left;
+}
+
+.list {
+	width: 40vw;
+	float: right;
+}
+
+.logo,
+.list {
+	padding-top: 2.3vw;
+}
+
+header .logo span {
+	padding-left: 13.7vw;
+	text-transform: uppercase;
+	font-size: .8vw;
+	color: #fff;
+	letter-spacing: 2px;
+}
+
+.list nav a {
+	text-decoration: none;
+	font-size: .7vw;
+	color: #fff;
+	margin-right: 2vw;
+	padding-bottom: 5px;
+	padding-right: 1vw;
+	padding-left: 1vw;
+}
+
+.list nav a:hover {
+	border-bottom: 2px solid #b7c8d9;
+}
+
+.brand {
+	float: left;
+	width: 100%;
+	margin-top: 10vw;
+	text-align: center;
+	color: #fff;
+}
+
+.brand span {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	position: relative;
+}
+
+span.symbol {
+	font-size: 4.5rem;
+	text-transform: uppercase;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-style: italic;
+}
+
+span.tm {
+	font-size: 1rem;
+	letter-spacing: 1px;
+	padding-top: 43px;
+	position: absolute;
+}
+
+.brand p {
+	margin-top: 0;
+	margin-bottom: 10vw;
+}
+
+.brand button {
+	top: 36vw;
+	left: 43vw;
+	width: 14vw;
+	height: 5vw;
+	font-family: "Open Sans";
+	font-size: 15px;
+	border: 2px solid #fff;
+	background: #000;
+	opacity: 0.8;
+	color: #fff;
+	position: absolute;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	background: #fff;
+	color: #000;
+	padding-left: 16%;
+	padding-right: 16%;
+	grid-auto-rows: 17vw;
+}
+
+.text1 p {
+	font-size: 1vw;
+	line-height: 2;
+	margin-top: 0;
+	padding: 5vw 0 0 0;
+}
+
+.text2 p {
+	font-size: .83vw;
+	line-height: 1.2;
+	margin: 0;
+	padding: 5.5vw 0 0 0;
+	font-weight: bold;
+}
+
+.wrapper1 {
+	display: grid;
+	background: #f3f3f3;
+	color: #000;
+	padding-left: 16%;
+	padding-right: 16%;
+	grid-auto-rows: 10vw;
+}
+
+.wrapper1 p {
+	font-size: 1vw;
+	text-align: center;
+	margin: 0;
+	padding: 5vw 0 0 0;
+}
+
+.wrapper2 {
+	display: grid;
+	background: #f3f3f3;
+	padding-left: 16%;
+	padding-right: 16%;
+	grid-column-gap: 2%;
+	grid-row-gap: 1em;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: minmax(18vw, auto);
+}
+
+.wrapper2>div {
+	border: 1px solid #fff;
+}
+
+.box1 {
+	grid-column: 1/3;
+	background-image: url(../img/sample.jpg);
+}
+
+.box2 {
+	grid-column: 3;
+	background-image: url(../img/sample2.jpg);
+}
+
+.box3 {
+	grid-column: 2/4;
+	grid-row: 2;
+	background-image: url(../img/sample3.jpg);
+}
+
+.box4 {
+	background-image: url(../img/sample2.jpg);
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: inset 0px -118px 81px -56px rgba(0, 0, 0, 0.57);
+}
+
+.wrapper2 div {
+	display: flex;
+}
+
+.januari {
+	padding-top: 15vw;
+	padding-left: 20px;
+	width: 20vw;
+	color: #FFF;
+}
+
+.box3 .januari {
+	width: 40vw;
+}
+
+.box2 .januari,
+.box4 .januari {
+	width: 14vw;
+}
+
+.country {
+	padding-left: 5px;
+	font-weight: bold;
+}
+
+.box1 button {
+	top: 1.8vw;
+	left: 15vw;
+}
+
+.box1 button,
+.box2 button,
+.box3 button,
+.box4 button {
+	position: relative;
+	width: 6vw;
+	height: 3vw;
+	background: #000000;
+	opacity: 0.5;
+	border: 2px solid #FFF;
+	color: #FFF;
+}
+
+.box2 button,
+.box3 button,
+.box4 button {
+	top: 1.8vw;
+	left: -1.8vw;
+}
+
+.wrapper3 {
+	display: flex;
+	height: 12vw;
+	background: #f3f3f3;
+	color: #000;
+	padding-left: 16%;
+	padding-right: 16%;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.titform {
+	width: 27.2vw;
+}
+
+.form {
+	width: 40.8vw;
+	display: flex;
+}
+
+.titform,
+.form {
+	height: 12vw;
+	background: #fff;
+	display: flex;
+}
+
+.titform p {
+	padding: 0.7vw 0 0 3vw;
+	margin: 0;
+	height: 40px;
+}
+
+.email {
+	float: left;
+    display: inline-block;
+}
+
+.button1 {
+    display: inline-block;
+}
+#email,
+.titform p,
+.button1>button {
+	margin-top: 4vw;
+}
+
+#email {
+    display: inline-block;
+    font-size: 14px;
+	width: 25vw;
+	height: 3vw;
+	background: #f3f3f3;
+	border: 1px solid #000;
+	padding: 0px 0px 0px 10px;
+    border-radius: 0;
+    font-family: "Open Sans";
+}
+.email ::placeholder {
+	color: #000;
+}
+
+.wrapper3 button {
+    border-radius: 0;
+    border: 1px solid transparent;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+	width: 9vw;
+	height: calc(3vw + 2px);
+	border-left: none;
+	font-family: "Open Sans";
+	background: #000;
+	opacity: 0.8;
+	color: #FFF;
+}
+
+
+.hr {
+	padding-left: 16%;
+	padding-right: 16%;
+}
+
+.wrapper4 {
+	display: flex;
+	background: #FFF;
+	color: black;
+	padding-left: 16%;
+	padding-right: 16%;
+	height: 22vw;
+}
+
+.colon {
+	height: 7vw;
+	padding-top: 7vw;
+	width: 17vw;
+}
+
+.colon h3 {
+	margin: 0;
+	padding: 0;
+}
+
+.colon p,
+.colon blockquote {
+	margin: 0;
+	padding: 0 2vw 0 0;
+	color: #A4A4A4;
+	font-size: .8vw;
+}
+
+.colon blockquote {
+	font-style: italic;
+}
+
+.hours p {
+	margin: 0;
+	padding: .5vw 0 0 0;
+	color: #A4A4A4;
+	opacity: .8;
+}
+
+.colontext1,
+.colon blockquote {
+	line-height: 1.5;
+}
+
+.colontext2 {
+	line-height: 2;
+}
+
+
+.form1 {
+    display: block;
+	padding-top: 10px;
+	height: 4vw;
+	width: 17vw;
+}
+
+.form1 form {
+    height: 4vw;
+}
+
+.email2 {
+	height: 2vw;
+	float: left;
+}
+
+.email2, .button2, input#email2, .button2 button {
+    display: inline-block;
+}
+
+input#email2 {
+	padding: 0 0 0 1vw; /* jfjfj*/
+    width: 9vw;
+	height: 2vw;
+	font-size: 0.7vw;
+	background: #f3f3f3;
+	border: 1px solid #000;
+    margin: 0;
+    font-family: "Open Sans";
+}
+.email2 ::placeholder {
+	color: #A4A4A4;
+	font-style: italic;
+}
+
+.button2 {
+	height: 2vw;
+}
+
+.button2 button, .button2 {
+    width: 5vw;
+}
+
+.button2 button {
+    padding: 0px;
+    margin: 0;
+    height: calc(2vw + 2px);
+	font-size: 0.7vw;
+	font-family: "Open Sans";
+	background: #000;
+	opacity: 0.8;
+	color: #FFF;
+    border: 1px solid transparent;
+}
+
+
+footer {
+	padding-left: 16%;
+	padding-right: 16%;
+	height: 8vh;
+	display: flex;
+}
+
+.copyright,
+.list2 {
+	padding-top: .8vw;
+}
+
+.copyright {
+	width: 50%;
+	font-size: 0.7vw;
+	color: #A4A4A4;
+}
+
+.list2 {
+	width: 50%;
+	font-size: 0.9vw;
+	text-align: end;
+	font-weight: bold;
+}
+
+.list2 nav a {
+	padding-left: 1.2vw;
+	text-decoration-line: none;
+	color: #000;
+}
