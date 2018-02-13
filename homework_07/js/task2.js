@@ -15,9 +15,9 @@ if (startGame) {
                         "\nAttempts: " +
                         i +
                         "\nTotal prize: " +
-                        userPrize +
+                        userPrize + "$" +
                         "\nPossible prize on current attempts: " +
-                        possiblePrize
+                        possiblePrize +"$"
                 )
             );
             if (number == rnd) {
