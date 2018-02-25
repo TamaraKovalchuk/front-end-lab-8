@@ -1,61 +1,68 @@
 var rootNode = document.getElementById("root");
 
-var master = document.createElement("ul");
-rootNode.appendChild(master);
+function treeView(rootEl, structure, show) {
+	if (Array.isArray(structure)) {
+		var ul = document.createElement("ul");
 
-function createTree(el, parent) {
-  for (var i = 0; i < el.length; i++) {
-    var ul = document.createElement("ul");
-    var li = document.createElement("li");
-    var p = document.createElement("p");
-    var img = document.createElement("i");
-    img.className = "material-icons";
+		if (!show) {
+			ul.style.display = "none";
+		}
+		rootEl.appendChild(ul);
 
-    if (el[i].folder) {
-      img.innerHTML = "folder";
-    } else {
-      img.innerHTML = "insert_drive_file";
-      p.className = "file";
-    }
+		for (var i = 0; i < structure.length; i++) {
+			var li = document.createElement("li");
+			ul.appendChild(li);
+			var div = document.createElement("div");
+			div.setAttribute("class", "context");
+			li.appendChild(div);
 
-    var span = document.createElement("span");
-    span.innerHTML = el[i].title;
-    p.appendChild(img);
-    p.appendChild(span);
-    li.appendChild(p);
-    parent.appendChild(li);
-    p.addEventListener("click", toggle);
+			if (structure[i].folder) {
+				div.addEventListener("click", switchView);
+				addImg(div, "folder", "folder");
+				addText(div, structure[i].title);
 
-    if (el[i].children) {
-      li.appendChild(ul);
-      if (el[i].folder) {
-        img.innerHTML = "folder";
-      } else {
-        img.innerHTML = "insert_drive_file";
-      }
-
-      ul.style.display = "none";
-      createTree(el[i].children, ul);
-    } else if (el[i].folder && !el[i].children) {
-      parent.appendChild(ul);
-
-      var liEmpty = document.createElement("li");
-      liEmpty.innerHTML = "Folder is empty";
-      li.appendChild(liEmpty);
-      liEmpty.style.display = "none";
-    }
-  }
-}
-function toggle(e) {
-  if (this.nextElementSibling.style.display === "none") {
-    this.nextElementSibling.style.display = "block";
-    this.children[0].innerHTML = "folder_open";
-  } else {
-    this.nextElementSibling.style.display = "none";
-    this.children[0].innerHTML = "folder";
-  }
+				if (structure[i].children) {
+					treeView(li, structure[i].children, false);
+				} else {
+					var empty = document.createElement("div");
+					empty.setAttribute("class", "empty");
+					li.appendChild(empty);
+					empty.innerHTML = "Folder is empty";
+					empty.style.display = "none";
+				}
+			} else {
+				addImg(div, "insert_drive_file", "file");
+				addText(div, structure[i].title);
+			}
+		}
+	}
 }
 
-createTree(structure, master);
+function addImg(parentNode, imgId, className) {
+	var img = document.createElement("i");
+	img.setAttribute("class", "material-icons " + className);
+	img.innerHTML = imgId;
+	parentNode.appendChild(img);
+}
 
-rootNode.appendChild(master);
+function addText(parentNode, content) {
+	var text = document.createElement("span");
+	text.innerHTML = content;
+	parentNode.appendChild(text);
+}
+
+function switchView(event) {
+	var cld = this.nextSibling;
+	if (cld.style.display === "none") {
+		cld.style.display = "block";
+		this.childNodes[0].innerHTML = "folder_open";
+	} else {
+		cld.style.display = "none";
+		this.childNodes[0].innerHTML = "folder";
+	}
+}
+
+var div = document.createElement("div");
+treeView(div, structure, true);
+
+rootNode.appendChild(div);
