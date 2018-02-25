@@ -1,0 +1,18 @@
+li {
+  list-style: none;
+}
+i {
+  color: #eee024;
+}
+.file i {
+  color: rgb(207, 207, 207);
+}
+p {
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  margin: 5px;
+}
+p:hover {
+  background-color: rgb(240, 240, 240);
+}
