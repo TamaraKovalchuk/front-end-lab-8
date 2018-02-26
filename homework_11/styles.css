@@ -21,11 +21,6 @@ li {
 	font-size: 24px;
 }
 
-div,
-div ul {
-	width: 100%;
-}
-
 .context:hover {
 	background-color: #DED9D9;
 }
