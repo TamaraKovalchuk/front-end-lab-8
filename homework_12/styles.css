@@ -1,0 +1,114 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.thumbnails{
+	height: 100vh;
+	background: #1C1C1F;
+}
+h1{
+	padding-top: 4%;
+	padding-left: 1%;
+	color: #AEAEAE;
+}
+.tank_preview{
+	padding-top: 5%;
+	padding-left: 3%;
+	display: grid;
+	grid-template-columns: 14vw 14vw 14vw 14vw 14vw 14vw;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 10px;
+}
+
+a{
+	text-decoration: none;
+  	
+}
+.thumbnails .tank_preview :hover {
+	background-color: #515157;
+}
+.model{
+	height: auto;
+}
+	
+.model img{
+	height: auto;
+	width: 14vw;
+}
+.info{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+div .level, div .name{
+	font-weight:bold;
+	font-size: 24px;
+	padding-left: 2%;
+}
+div .level{
+	color: #AEAEAE;
+	
+}
+div .name{
+	text-transform: uppercase;
+	color: #D1D1D2;
+	white-space: nowrap; 
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+.tank-details{
+	background: #1C1C1F;
+	height: 100vh;
+}
+
+.info_tanks, .model_in_full_size h2, .model_in_full_size h5 {
+	padding-left: 1vw;
+	
+}
+.info_tanks, .model_in_full_size h2, .model_in_full_size h5, .info_detais{
+	color: #AEAEAE;
+	
+}
+.info_tanks{
+	display: flex;
+	align-items: center;
+	padding-top: 2%;
+	
+}
+div .level1, div .name1{
+	font-weight:bold;
+	font-size: 30px;
+	padding-left: 15px;
+}
+div .name1{
+	text-transform: uppercase;
+}
+.model_detais{
+	display: flex;
+}
+.model_in_full_size{
+	width: 45vw;
+	height: auto;
+}
+.info_detais{
+	width: 55vw;
+	height: auto;
+}
+.model_in_full_size h2{
+	padding-top: 20px;
+}
+
+table{
+	margin-top:15px;
+	border-collapse: collapse;
+}
+tr, td{
+     border: 1px solid #AEAEAE;
+}
+td:first-child{
+	padding: .6vw 30vw .6vw .6vw;
+}
+td:nth-child(2){
+	padding: .6vw 10vw .6vw .6vw;
+}
